@@ -1,0 +1,1 @@
+:root { --ph-img: none; } html :is(.MainPanel, .LeftListSizableContainer) img { mix-blend-mode: normal !important; } html :is(.MainPanel, .LeftListSizableContainer) :is(.LibraryItemBox, .HoversEnabled, .TopCapsule .ImgContainer, .Portrait) { background-color: transparent !important; }

@@ -1,0 +1,18 @@
+/* Phosphor — context menus and dropdown menus (each is its own window). */
+@import url("./core/alias.css");
+@import url("./core/tokens.css");
+@import url("./core/base.css");
+html, body { background: transparent !important; }
+html body .contextMenu.ContextMenuPosition,
+html body .contextMenu { background: transparent !important; border: none !important; box-shadow: none !important; }
+/* PHOSPHOR menus: a framed pane; the highlighted line in reverse video */
+html .contextMenu .contextMenuContents, html .contextMenu .NotificationsMenu {
+    border-radius: 0 !important; border: none !important; background: var(--ph-bg) !important; box-shadow: var(--ph-frame) !important; padding: 6px !important;
+    animation: mr-pop 120ms steps(6) backwards;
+}
+html .contextMenu .contextMenuContents .contextMenuItem { border-radius: 0 !important; padding: 2px 10px !important; background: transparent !important; color: var(--ph-1) !important; font-size: 13px !important; text-transform: lowercase !important; letter-spacing: 0 !important; font-weight: 400 !important; }
+html .contextMenu .contextMenuContents .contextMenuItem:not(.disabled):is(:hover,:focus,.active) { background: var(--ph-1) !important; color: var(--ph-bg) !important; text-shadow: none; }
+html .contextMenu .contextMenuContents .contextMenuItem.disabled { color: var(--ph-4) !important; }
+html .contextMenu .contextMenuContents hr.Separator, html .contextMenu hr { border: none !important; height: 1px !important; margin: 3px 0 !important; background: repeating-linear-gradient(90deg, var(--ph-3) 0 6px, transparent 6px 9px) !important; }
+html .contextMenu .contextMenuContents .contextMenuItem.ContextMenuAction:is(.Play,.Launch)::before { content: "$ ./"; }
+html .contextMenu .contextMenuContents .contextMenuItem.ContextMenuAction svg { display: none !important; }

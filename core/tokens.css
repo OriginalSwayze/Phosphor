@@ -1,0 +1,37 @@
+/* PHOSPHOR — tokens. One phosphor color at several intensities; nothing else. */
+:root {
+    --ph-c: var(--ph-p-c, #33FF66);
+    --ph-bg: var(--ph-p-bg, #020A04);
+    --ph-hi: color-mix(in srgb, var(--ph-c) 100%, white 35%);
+    --ph-1: var(--ph-c);
+    --ph-2: color-mix(in srgb, var(--ph-c) 70%, var(--ph-bg));
+    --ph-3: color-mix(in srgb, var(--ph-c) 45%, var(--ph-bg));
+    --ph-4: color-mix(in srgb, var(--ph-c) 22%, var(--ph-bg));
+    --ph-5: color-mix(in srgb, var(--ph-c) 10%, var(--ph-bg));
+    --ph-glow: 0 0 2px color-mix(in srgb, var(--ph-c) 80%, transparent), 0 0 8px color-mix(in srgb, var(--ph-c) 40%, transparent);
+    --ph-mono: "Cascadia Mono", "Cascadia Code", Consolas, "Lucida Console", monospace;
+    --ph-frame: inset 0 0 0 1px var(--ph-3), inset 0 0 0 3px var(--ph-bg), inset 0 0 0 4px var(--ph-4);
+
+    --t-accent: var(--ph-1);
+    --t-accent-2: var(--ph-hi);
+    --t-alert: var(--ph-hi);
+    --t-bg: var(--ph-bg);
+    --t-panel: var(--ph-bg);
+    --t-ink: var(--ph-bg);
+    --t-fg: var(--ph-1);
+    --t-fg-2: var(--ph-2);
+    --t-fg-3: var(--ph-3);
+    --t-fg-4: var(--ph-4);
+    --t-line: var(--ph-4);
+    --mr-r: 0px; --mr-r-lg: 0px; --mr-r-md: 0px; --mr-r-sm: 0px; --mr-r-pill: 0px;
+    --mr-glass: var(--ph-bg); --mr-glass-strong: var(--ph-bg); --mr-glass-solid: var(--ph-bg);
+    --mr-glass-filter: none; --mr-glass-edge: var(--ph-frame);
+    --mr-hover: var(--ph-5); --mr-press: var(--ph-4);
+    --mr-font: var(--ph-mono); --mr-font-display: var(--ph-mono); --mr-font-mono: var(--ph-mono);
+    --mr-grad: linear-gradient(var(--ph-1), var(--ph-1));
+    --mr-grad-soft: linear-gradient(var(--ph-5), var(--ph-5));
+    --mr-on-accent: var(--ph-bg);
+    --mr-ok: var(--ph-hi); --mr-warn: var(--ph-hi); --mr-info: var(--ph-1);
+    --mr-t-1: 0ms; --mr-t-2: 0ms; --mr-t-3: 120ms; --mr-t-4: 200ms;
+    --mr-spot: none;
+}

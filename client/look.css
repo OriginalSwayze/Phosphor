@@ -1,0 +1,110 @@
+/* PHOSPHOR — the look: one color, many brightnesses; reverse video for selection; box-drawing frames. */
+html .DesktopUI :is(span, div, a, input, button) { color: inherit; }
+html :is(.UpdatesContainer .Name, .ShowcaseHeader .Focusable, .ShowcaseHeader .DialogDropDown_CurrentDisplay, .AppDetailsSection .SectionHeader, h2.SectionHeader) {
+    font-size: 15px !important; font-weight: 700 !important; text-transform: lowercase !important; letter-spacing: 0 !important; color: var(--ph-hi) !important; background: transparent !important;
+}
+html :is(.UpdatesContainer .Name, .AppDetailsSection .SectionHeader, h2.SectionHeader)::before { content: "## "; color: var(--ph-3); }
+html .AppDetailsSection .SectionHeader::before { width: auto !important; height: auto !important; background: none !important; box-shadow: none !important; transform: none !important; border-radius: 0 !important; display: inline !important; vertical-align: baseline; margin: 0 !important; }
+html :is(.UpdatesContainer .Name, .AppDetailsSection .SectionHeader)::after { content: "_"; animation: ph-cursor 1s steps(1) infinite; color: var(--ph-hi); margin-left: 4px; }
+html :is(.PlayBar .PlayBarLabel, .UpdatesContainer .EventTime, .LeftListSizableContainer .SearchBar .MenuHeader .ViewName) {
+    font-size: 11px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: lowercase !important; color: var(--ph-3) !important;
+}
+html .PlayBar .PlayBarLabel::after { content: ":"; }
+html .PlayBar :is(.LastPlayedInfo, .PlayBarDetailLabel) { color: var(--ph-hi) !important; font-size: 13px !important; }
+html img { filter: var(--ph-img, grayscale(1) brightness(1.1) contrast(1.15)); }
+html :is(.MainPanel, .LeftListSizableContainer) :is(.LibraryItemBox, .HoversEnabled, .TopCapsule .ImgContainer, .Portrait) img { mix-blend-mode: multiply; }
+html :is(.MainPanel, .LeftListSizableContainer) :is(.LibraryItemBox, .HoversEnabled, .TopCapsule .ImgContainer, .Portrait) { background-color: var(--ph-c) !important; }
+html .ReactVirtualized__List .GameIcon img { mix-blend-mode: normal !important; opacity: .75; }
+
+/* Wordmark */
+html .RootMenuBar .RootMenuButton .SteamButton::before { display: none; }
+html .RootMenuBar .RootMenuButton .SteamButton::after { content: "phosphor"; font-size: 13px; font-weight: 700; color: var(--ph-bg); background: var(--ph-1); padding: 0 6px; text-shadow: none; letter-spacing: 0; }
+html .RootMenuBar .RootMenuButton { height: 26px !important; padding: 0 8px !important; font-size: 13px !important; text-transform: lowercase !important; letter-spacing: 0 !important; color: var(--ph-2) !important; border-radius: 0 !important; }
+html .RootMenuBar .RootMenuButton::before { content: "["; color: var(--ph-4); }
+html .RootMenuBar .RootMenuButton::after { content: "]"; color: var(--ph-4); }
+html .RootMenuBar .RootMenuButton:has(.SteamButton)::before, html .RootMenuBar .RootMenuButton:has(.SteamButton)::after { content: none; }
+html .RootMenuBar .RootMenuButton:hover { background: var(--ph-1) !important; color: var(--ph-bg) !important; text-shadow: none; }
+
+/* Top-right: plain brackets */
+html .TitleBarControls .Button, html .TitleBarControls .AccountMenu { border-radius: 0 !important; background: transparent !important; box-shadow: none !important; height: 24px !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+html .TitleBarControls .Button:hover, html .TitleBarControls .AccountMenu:hover { background: var(--ph-1) !important; transform: none !important; }
+html .TitleBarControls .Button:hover svg path, html .TitleBarControls .Button:hover svg { fill: var(--ph-bg) !important; }
+html .TitleBarControls .Button svg, html .TitleBarControls .Button svg path { fill: var(--ph-2) !important; }
+html .TitleBarControls .AccountMenu { font-size: 13px !important; color: var(--ph-1) !important; }
+html .TitleBarControls .AccountMenu::before { content: "user@"; color: var(--ph-3); }
+html .TitleBarControls .AccountMenu .avatarHolder { display: none !important; }
+html .TitleBarControls .AccountMenu .WalletBalance { background: transparent !important; color: var(--ph-hi) !important; }
+html .TitleBarControls .AccountMenu .WalletBalance::before { content: "$"; color: var(--ph-3); }
+html .TitleBar .title-bar-actions .title-area-icon { border-radius: 0 !important; }
+html .TitleBar .title-bar-actions .title-area-icon:hover { background: var(--ph-1) !important; transform: none !important; }
+html .TitleBar .title-bar-actions .title-area-icon svg :is(path, line, rect) { stroke: var(--ph-2) !important; }
+
+/* Panes */
+html .Library > .Container > div:not(.MainPanel):first-child, html .MainPanel {
+    background: var(--ph-bg) !important; box-shadow: var(--ph-frame) !important; clip-path: none !important; animation: mr-fade-up 300ms steps(10) backwards;
+}
+
+/* Game list as a directory listing */
+html .HomeBox .Bar .Label { font-size: 13px !important; text-transform: lowercase !important; letter-spacing: 0 !important; color: var(--ph-hi) !important; font-weight: 700 !important; }
+html .HomeBox .Bar .Label::before { content: "~/"; color: var(--ph-3); font-weight: 400; }
+html .HomeBox .Bar.Selected { background: transparent !important; box-shadow: none !important; }
+html .SearchInput input.DialogInput, html .SearchInput input.DialogTextInputBase {
+    border-radius: 0 !important; background: transparent !important; border: none !important; box-shadow: inset 0 -1px 0 var(--ph-3) !important;
+    padding-left: 22px !important; background-image: none !important; color: var(--ph-hi) !important; caret-color: var(--ph-hi);
+}
+html .SearchInput .Panel { position: relative; }
+html .SearchInput .Panel::before { content: "/"; position: absolute; left: 8px; top: 50%; transform: translateY(-50%); color: var(--ph-hi); z-index: 2; }
+html .SearchInput input::placeholder { color: var(--ph-4) !important; }
+html .ReactVirtualized__List .SectionName { font-size: 13px !important; text-transform: lowercase !important; letter-spacing: 0 !important; color: var(--ph-hi) !important; font-weight: 700 !important; }
+html .ReactVirtualized__List .SectionName::after { content: "/"; color: var(--ph-3); }
+html .ReactVirtualized__List .SectionCount { color: var(--ph-3) !important; }
+html .ReactVirtualized__List .SectionRule { display: none; }
+html .ReactVirtualized__List .Container:has(> .GameListEntryContainer) { border-radius: 0 !important; background: transparent !important; transition: none !important; }
+html .ReactVirtualized__List .GameListEntryContainer { transition: none !important; }
+html .ReactVirtualized__List .GameListEntryContainer > span { font-size: 13px !important; color: var(--ph-2) !important; }
+html .ReactVirtualized__List .Container.Installed:has(> .GameListEntryContainer) .GameListEntryContainer > span { color: var(--ph-1) !important; }
+html .ReactVirtualized__List .Container.Installed:has(> .GameListEntryContainer) .GameListEntryContainer > span::after { content: "*"; color: var(--ph-hi); }
+html .ReactVirtualized__List .GameListEntryContainer .GameIcon { opacity: .8; border-radius: 0 !important; }
+html .ReactVirtualized__List .Container:has(> .GameListEntryContainer):hover .GameListEntryContainer > span { text-decoration: underline; text-underline-offset: 3px; }
+html .ReactVirtualized__List .Container:has(> .GameListEntryContainer):hover .GameListEntryContainer { transform: none !important; }
+/* Selected: reverse video */
+html body .ReactVirtualized__List .Container.Selected.Selected:has(> .GameListEntryContainer) { background: var(--ph-1) !important; box-shadow: none !important; }
+html body .ReactVirtualized__List .Container.Selected.Selected:has(> .GameListEntryContainer) .GameListEntryContainer > span { color: var(--ph-bg) !important; text-shadow: none !important; font-weight: 700 !important; }
+html .ReactVirtualized__List .Container.Selected:has(> .GameListEntryContainer)::before { display: none !important; }
+html .ReactVirtualized__List .Container.Running:has(> .GameListEntryContainer) .GameListEntryContainer > span::before { content: "[run] "; color: var(--ph-hi); }
+
+/* Home */
+html .UpdatesContainer { background: transparent !important; }
+html .UpdatesContainer .HoversEnabled, html .LibraryItemBox, html .LibraryItemBox > * { border-radius: 0 !important; }
+html .UpdatesContainer .HoversEnabled { box-shadow: 0 0 0 1px var(--ph-3) !important; }
+html .LibraryItemBox { box-shadow: 0 0 0 1px var(--ph-4) !important; transition: none !important; }
+html .LibraryItemBox:hover { transform: none !important; box-shadow: 0 0 0 2px var(--ph-hi), 0 0 16px color-mix(in srgb, var(--ph-c) 50%, transparent) !important; }
+html .LibraryItemBox::after, html .LibraryItemBoxShine { display: none !important; }
+html .PageLeft, html .PageRight { border-radius: 0 !important; background: transparent !important; box-shadow: inset 0 0 0 1px var(--ph-3) !important; }
+html :is(.PageLeft, .PageRight):not(.Disabled):hover { background: var(--ph-1) !important; transform: none !important; }
+html .ShowcaseHeader .Rule, html .AddShowcaseRow .Rule { height: 1px !important; background: repeating-linear-gradient(90deg, var(--ph-3) 0 6px, transparent 6px 9px) !important; }
+
+/* Game page */
+html .AppDetailsMain .TopCapsule { border-radius: 0 !important; }
+html .AppDetailsMain .TopCapsule img.TitleLogo { filter: grayscale(1) brightness(1.4); mix-blend-mode: screen; }
+html .AppDetailsMain .PlayBar > .InnerContainer { border-radius: 0 !important; background: var(--ph-bg) !important; box-shadow: var(--ph-frame) !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+html .PlayButton.ButtonChild { border-radius: 0 !important; background: var(--ph-1) !important; box-shadow: none !important; animation: none !important; min-width: 150px; }
+html .PlayButton.ButtonChild .ButtonText { font-size: 15px !important; font-weight: 700 !important; text-transform: lowercase !important; letter-spacing: 0 !important; color: var(--ph-bg) !important; text-shadow: none !important; }
+html .PlayButton.ButtonChild .ButtonText::before { content: "$ ./"; }
+html .PlayButton.ButtonChild svg { display: none !important; }
+html .PlayButton.ButtonChild::after { display: none !important; }
+html .PlayButton.ButtonChild:hover { background: var(--ph-hi) !important; transform: none !important; }
+html .PlayButton.ButtonChild:hover .ButtonText::after { content: "_"; animation: ph-cursor .6s steps(1) infinite; }
+html .PlayBar .RightControls .MenuButton { border-radius: 0 !important; background: transparent !important; box-shadow: inset 0 0 0 1px var(--ph-3) !important; }
+html .LinksSection .LinkInner { display: inline-flex !important; flex-direction: row !important; align-items: center; white-space: nowrap; border-radius: 0 !important; background: transparent !important; box-shadow: none !important; color: var(--ph-2) !important; text-transform: lowercase !important; letter-spacing: 0 !important; font-size: 12.5px !important; padding: 4px 8px !important; }
+html .LinksSection .LinkInner::before { content: "["; } html .LinksSection .LinkInner::after { content: "]"; }
+html .LinksSection .LinkInner:hover { background: var(--ph-1) !important; color: var(--ph-bg) !important; transform: none !important; text-shadow: none; }
+html .AppDetailsSection:not(.LinksSection) > .Panel, html .PartnerEvent.Event { border-radius: 0 !important; background: transparent !important; box-shadow: inset 0 0 0 1px var(--ph-4) !important; }
+html .PartnerEventFeaturedHeader { background: var(--ph-1) !important; color: var(--ph-bg) !important; text-shadow: none; text-transform: lowercase; }
+html .ProgressBar .Unlocked, html .ProgressBar [class*="Unlocked"], html .PlayBar .DetailsProgressBar { border-radius: 0 !important; background: repeating-linear-gradient(90deg, var(--ph-1) 0 7px, transparent 7px 9px) !important; box-shadow: none !important; }
+html .ProgressBar, html .PlayBar .DetailsProgressContainer { border-radius: 0 !important; background: transparent !important; box-shadow: inset 0 0 0 1px var(--ph-3) !important; }
+
+/* Startup: power-on self test */
+html .od-boot.ph-post { position: fixed; inset: 0; z-index: 10000; background: var(--ph-bg); padding: 40px 50px; font-size: 15px; line-height: 1.55; white-space: pre; pointer-events: none; animation: ph-out 200ms steps(1) 3400ms forwards; }
+html .od-boot.ph-post div { overflow: hidden; max-width: 0; animation: ph-type 300ms steps(30) forwards; }
+html .od-boot.ph-post .hi { color: var(--ph-hi); }

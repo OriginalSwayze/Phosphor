@@ -1,0 +1,14 @@
+/* Phosphor — desktop notifications. */
+@import url("./core/alias.css");
+@import url("./core/tokens.css");
+@import url("./core/base.css");
+html:has(> body.DesktopToastContainer),
+html body.DesktopToastContainer { background: transparent !important; }
+html .DesktopToastContainer .DesktopToastBackground,
+html .DesktopToastContainer .DesktopToastTemplate { background: transparent !important; }
+/* PHOSPHOR notifications: a log line printing in */
+html .DesktopToastContainer .DesktopToastPopup { border-radius: 0 !important; border: none !important; background: var(--ph-bg) !important; box-shadow: var(--ph-frame) !important; animation: mr-pop 200ms steps(8) backwards; }
+html .DesktopToastContainer .DesktopToastTemplate :is(.Header .Title,.GroupMessageUserName,.IngameTitle) { color: var(--ph-hi) !important; text-transform: lowercase; }
+html .DesktopToastContainer .DesktopToastTemplate :is(.Header .Title,.GroupMessageUserName,.IngameTitle)::before { content: "[" attr(class) "]"; content: "[notice] "; color: var(--ph-3); }
+html .DesktopToastContainer .DesktopToastTemplate :is(.StandardNotificationDescription,.GroupMessageBody,.StandardNotificationSubText) { color: var(--ph-1) !important; }
+html .DesktopToastContainer .DesktopToastTemplate img { filter: grayscale(1) brightness(1.2); mix-blend-mode: screen; }

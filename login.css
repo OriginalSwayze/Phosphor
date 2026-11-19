@@ -1,0 +1,19 @@
+/* Phosphor — the "Sign in to Steam" window. */
+@import url("./core/alias.css");
+@import url("./core/tokens.css");
+@import url("./core/base.css");
+@import url("./core/backdrop.css");
+html .Login, html .Login.AnimatedBackground, html .LoginAnimatedBackground,
+html .Login .LoginStatusContainer, html .Login .SpinnerLoaderContainer { background: transparent !important; }
+html .Login.AnimatedBackground::before, html .LoginAnimatedBackground::after, html .Login video { display: none !important; }
+html .Login .SpinnerLoaderContainer { position: relative; }
+html .Login .SpinnerLoaderContainer > img { opacity: 0 !important; }
+/* PHOSPHOR sign-in: a spinner made of characters */
+html .Login .SpinnerLoaderContainer::before { content: "|"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 40px; color: var(--ph-hi); animation: ph-spin-chars .8s steps(1) infinite; }
+@keyframes ph-spin-chars { 0% { content: "|"; } 25% { content: "/"; } 50% { content: "-"; } 75% { content: "\\"; } }
+html .Login .LoadingStatus, html .Login .LoadingStatus > .LoginStatus { text-transform: lowercase; color: var(--ph-1) !important; }
+html .Login .LoadingStatus > .LoginStatus::before { content: "> "; }
+html .Login .LoadingStatus > .LoginStatus::after { content: "_"; animation: ph-cursor 1s steps(1) infinite; }
+html .Login .ProgressBar { border-radius: 0 !important; background: repeating-linear-gradient(90deg, var(--ph-1) 0 7px, transparent 7px 9px) !important; }
+html .Login .Avatar img { border-radius: 0 !important; filter: grayscale(1) brightness(1.2); mix-blend-mode: screen; }
+html .Login .UserContainer > .PersonaName { color: var(--ph-hi) !important; }

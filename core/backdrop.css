@@ -1,0 +1,28 @@
+/* PHOSPHOR — the tube: black glass, scanlines, a slow roll bar, curved-glass vignette, gentle flicker. */
+html { background: var(--ph-bg) !important; }
+body { background: transparent !important; animation: ph-flicker 4s linear infinite; animation-play-state: var(--mr-ambient); }
+html::before, html::after, body::before, body::after { content: ""; position: fixed; pointer-events: none; }
+html::before { inset: 0; z-index: -1; background: radial-gradient(120% 100% at 50% 50%, color-mix(in srgb, var(--ph-c) 7%, var(--ph-bg)), var(--ph-bg) 70%); }
+html::after {
+    inset: 0; z-index: 9998;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,.32) 0 1px, transparent 1px 3px);
+    opacity: var(--ph-scan, .7);
+}
+body::before {
+    left: 0; right: 0; top: 0; height: 120px; z-index: 9999;
+    background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--ph-c) 5%, transparent), transparent);
+    animation: ph-roll 11s linear infinite; animation-play-state: var(--mr-ambient);
+}
+body::after {
+    inset: 0; z-index: 9999;
+    background: radial-gradient(140% 120% at 50% 50%, transparent 62%, rgba(0,0,0,.75) 100%);
+    box-shadow: inset 0 0 120px rgba(0,0,0,.6);
+    border-radius: var(--ph-curve, 18px);
+}
+.ph-cmd { position: fixed; left: 0; right: 0; bottom: 26px; height: 26px; z-index: 10002; display: none; align-items: center; gap: 0;
+    background: var(--ph-bg); box-shadow: inset 0 1px 0 var(--ph-3); padding: 0 8px; font-size: 13px; }
+.ph-cmd.open { display: flex; }
+.ph-cmd input { flex: 1; background: transparent !important; border: none !important; outline: none !important; color: var(--ph-hi) !important; font: inherit !important; caret-color: var(--ph-hi); text-shadow: var(--ph-glow); }
+.ph-out { position: fixed; left: 0; right: 0; bottom: 52px; z-index: 10002; background: var(--ph-bg); box-shadow: inset 0 1px 0 var(--ph-3); padding: 6px 10px; font-size: 13px; white-space: pre; display: none; }
+.ph-out.open { display: block; }
+.Wrapper.ForceOpaqueBackground, .FocusNavigationRoot, .Root, .OuterFrame, .ContentFrame { background: transparent !important; }
