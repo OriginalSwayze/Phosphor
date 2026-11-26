@@ -1,6 +1,6 @@
 # Phosphor
 
-**Steam as a tiling terminal on a phosphor CRT.** A [Millennium](https://steambrew.app) theme for the Steam client.
+**Steam as a tiling terminal on a phosphor CRT.** A Steam client theme for [Beyond Steam](https://github.com/OriginalSwayze/Beyond-Steam) and [Millennium](https://steambrew.app).
 
 ![Phosphor: library](media/library.gif)
 
@@ -20,13 +20,14 @@
 
 ## Install
 
-1. Install [Millennium](https://steambrew.app).
-2. Find **Phosphor** in the Millennium theme browser, or download this repository into `Steam/millennium/themes/Phosphor`.
-3. Open **Steam → Millennium → Themes** and pick **Phosphor**.
+- **With [Beyond Steam](https://github.com/OriginalSwayze/Beyond-Steam) (easiest):** in Steam press **Ctrl+Shift+B**, open
+  **Get more** and install **Phosphor**.
+- **By hand:** download **Phosphor.zip** from the [latest release](https://github.com/OriginalSwayze/Phosphor/releases/latest) and unzip
+  it into `%APPDATA%\Beyond Steam\themes\Phosphor` (Beyond Steam) or `Steam\millennium\themes\Phosphor` (Millennium).
 
 ## Options
 
-Open **Millennium → Themes → Phosphor** to change:
+In Beyond Steam's **Theme options** tab (or **Millennium → Themes → Phosphor**) you can change:
 
 Phosphor (Green, Amber, White, Ice, Rose) · Images (Monochrome / Color) · Scanlines (Normal / Heavy / Off) · Density · What's New · Readout · Startup screen · Motion · Privacy
 
